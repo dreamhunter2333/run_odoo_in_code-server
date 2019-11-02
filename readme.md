@@ -4,6 +4,7 @@
 
 ```bash
 docker build -f Dockerfile -t odoo13_code_server:1.0 .
+cd docker
 ```
 
 ## start
@@ -22,4 +23,4 @@ You can install code-server as a chrome app which like a local vscode
 
 ## down
 
-`bash start,sh down`
+`bash start.sh down`
