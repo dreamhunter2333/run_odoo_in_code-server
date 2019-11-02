@@ -1,0 +1,9 @@
+.*
+!.gitignore
+*.DS_Store
+*DS_Store
+docker/code-server
+docker/volumes
+docker/Dockerfile copy
+training
+odoo
