@@ -10,7 +10,8 @@ RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get install sudo curl zsh wget nano psmisc -y
 RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get install screenfetch git -y
-RUN curl https://sail.dev/install.sh | bash
+RUN curl https://sail.dev/install.sh | bash && \
+    sail install-for-chrome-ext
 ENV SHELL=/bin/zsh
 RUN git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh && \
     cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
