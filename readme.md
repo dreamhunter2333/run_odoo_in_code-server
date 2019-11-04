@@ -15,7 +15,7 @@ Open [http://localhost:8080/](http://localhost:8080/)
 
 default `PASSWORD=admin` in docker/docker-compose.yml
 
-You can install code-server as a chrome app which like a local vscode
+You can install code-server as a chrome app which looks like an local vscode
 
 ![code-server](/docker/code-server.png)
 
