@@ -3,8 +3,8 @@
 ## docker build
 
 ```bash
-docker build -f Dockerfile -t odoo13_code_server:1.0 .
 cd docker
+docker build -f Dockerfile -t odoo13_code_server:1.0 .
 ```
 
 ## start
