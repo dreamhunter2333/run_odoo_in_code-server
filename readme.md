@@ -4,7 +4,7 @@
 
 ```bash
 cd docker
-docker build -f Dockerfile -t odoo13_code_server:1.0 .
+bash start.sh build
 ```
 
 ## start
