@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "----------killall python3----------"
-killall python3
+killall -9 python3
 # echo "--------kill coder packages--------"
 # ps -ef|grep packages|grep -v grep|cut -c 9-15|sed '1,1d'
 # ps -ef|grep packages|grep -v grep|cut -c 9-15|sed '1,1d'|xargs kill -9
