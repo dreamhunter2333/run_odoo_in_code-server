@@ -19,4 +19,3 @@ then
 else
     echo "参数错误";
 fi
-
