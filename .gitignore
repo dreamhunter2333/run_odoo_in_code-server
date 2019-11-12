@@ -7,3 +7,4 @@ docker/volumes
 docker/Dockerfile copy
 training
 odoo
+vscode

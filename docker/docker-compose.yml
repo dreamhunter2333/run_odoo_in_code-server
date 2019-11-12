@@ -15,10 +15,10 @@ services:
             - ./volumes/pg_data:/var/lib/postgresql/data
 
     odoo13_code_server:
-        # image: code_server:5.0
         image: odoo13_code_server:1.0
         container_name: odoo13_code_server
         command: /opt/odoo/docker/code-server/code-server /opt/odoo/ --user-data-dir /opt/odoo/docker/code-server/code-server-data/
+        # command: yarn web
         depends_on:
             - odoo13_db
         environment:
