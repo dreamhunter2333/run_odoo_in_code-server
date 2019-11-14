@@ -18,12 +18,12 @@ RUN git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh && \
 RUN python3 -m pip install wheel && python3 -m pip install --upgrade setuptools
 RUN python3 -m pip install autopep8 pylint -i https://pypi.tuna.tsinghua.edu.cn/simple
 RUN apt-get update -y && apt-get upgrade -y
-RUN apt install make gcc g++ pkg-config -y
+# RUN apt install make gcc g++ pkg-config -y
 RUN npm install n -g && n 11
 RUN npm install -g jshint
-RUN apt-get install libx11-dev libxkbfile-dev -y && apt-get install libsecret-1-dev -y
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
-    echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-RUN apt-get update && apt-get install yarn -y
+# RUN apt-get install libx11-dev libxkbfile-dev -y && apt-get install libsecret-1-dev -y
+# RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
+#     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+# RUN apt-get update && apt-get install yarn -y
 RUN apt-get update -y && apt-get upgrade -y
 WORKDIR /opt/odoo/vscode
