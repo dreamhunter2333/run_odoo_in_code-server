@@ -31,4 +31,3 @@ services:
             - ./volumes/odoo_data:/var/lib/odoo
             # - ./code-server/code-server-data:/root/.local/share/code-server
             - ../:/opt/odoo
-            # - /Users/dreamhunter/OneDrive/hexo:/opt/hexo

@@ -26,4 +26,4 @@ RUN npm install -g jshint
 #     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 # RUN apt-get update && apt-get install yarn -y
 RUN apt-get update -y && apt-get upgrade -y
-WORKDIR /opt/odoo/vscode
+WORKDIR /opt/odoo/
