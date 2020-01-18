@@ -2,9 +2,11 @@
 !.gitignore
 *.DS_Store
 *DS_Store
-docker/code-server
+__pycache__
+docker/coder-data/
 docker/volumes
-docker/Dockerfile copy
+docker/Dockerfile
 training
 odoo
-vscode
+docker/requirements.txt
+train_demo/

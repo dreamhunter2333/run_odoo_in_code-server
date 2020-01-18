@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
 
     odoo13_db:
@@ -17,8 +17,7 @@ services:
     odoo13_code_server:
         image: odoo13_code_server:1.0
         container_name: odoo13_code_server
-        command: /opt/odoo/docker/code-server/code-server /opt/odoo/ --user-data-dir /opt/odoo/docker/code-server/code-server-data/
-        # command: yarn web
+        command: code-server /opt/odoo/ --user-data-dir /opt/odoo/docker/coder-data/
         depends_on:
             - odoo13_db
         environment:
@@ -29,5 +28,4 @@ services:
             - "8090:8090"
         volumes:
             - ./volumes/odoo_data:/var/lib/odoo
-            # - ./code-server/code-server-data:/root/.local/share/code-server
             - ../:/opt/odoo
