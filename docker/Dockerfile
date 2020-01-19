@@ -1,4 +1,4 @@
-FROM  codercom/code-server:latest
+FROM  codercom/code-server:2.1698
 LABEL author=jinmu333
 
 USER root
@@ -18,15 +18,16 @@ ENV SHELL=/bin/zsh
 RUN git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh && \
     cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
-RUN python3 -m pip install xlwt num2words -i https://pypi.tuna.tsinghua.edu.cn/simple
+RUN python3 -m pip install xlwt num2words psycopg2-binary -i https://pypi.tuna.tsinghua.edu.cn/simple
 RUN python3 -m pip install autopep8 pylint -i https://pypi.tuna.tsinghua.edu.cn/simple
 COPY ./requirements.txt /opt/install/
 RUN python3 -m pip install -r /opt/install/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get install nodejs npm -y
-RUN npm install n -g && n 11
+RUN npm install n -g && n 12
 RUN npm install -g jshint
 RUN apt-get update -y && apt-get upgrade -y
 RUN rm -rf /root/.cache/
+ENTRYPOINT []
 
 WORKDIR /opt/odoo/
